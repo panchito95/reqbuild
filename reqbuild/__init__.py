@@ -2,7 +2,7 @@
 reqbuild – Automatically generate requirements.txt from your Python project.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "reqbuild contributors"
 __license__ = "MIT"
 
