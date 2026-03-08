@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reqbuild"
+version = "0.1.1"
+description = "Reads your Python files and builds a requirements.txt automatically — without running your code or guessing package names."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["requirements", "dependencies", "pip", "packaging", "ast"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+# reqbuild has zero runtime dependencies – everything it needs is in the stdlib.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/panchito95/reqbuild"
+Repository = "https://github.com/panchito95/reqbuild"
+"Bug Tracker" = "https://github.com/panchito95/reqbuild/issues"
+
+[project.scripts]
+reqbuild = "reqbuild.cli:main"
+
+# ─── Optional dev dependencies ────────────────────────────────────────────────
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "hatch",
+    "twine",
+    "build",
+]
+
+# ─── Tool config ─────────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
