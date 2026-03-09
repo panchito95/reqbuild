@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "reqbuild"
 version = "0.1.1"
-description = "Reads your Python files and builds a requirements.txt automatically — without running your code or guessing package names."
+description = "Reads your Python files, extracts import statements, and automatically builds a requirements.txt — without running your code or guessing package names."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
