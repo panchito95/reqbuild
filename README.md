@@ -2,9 +2,9 @@
 
 > Reads your Python files, extracts import statements, and automatically builds a `requirements.txt` — without running your code or guessing package names.
 
-[![PyPI version](https://badge.fury.io/py/reqbuild.svg)](https://pypi.org/project/reqbuild/)
-[![Python](https://img.shields.io/pypi/pyversions/reqbuild.svg)](https://pypi.org/project/reqbuild/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/reqbuild)](https://pypi.org/project/reqbuild/)
+[![Python](https://img.shields.io/pypi/pyversions/reqbuild)](https://pypi.org/project/reqbuild/)
+[![License](https://img.shields.io/pypi/l/reqbuild)](LICENSE)
 
 ---
 
