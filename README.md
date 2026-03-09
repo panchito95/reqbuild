@@ -1,6 +1,6 @@
 # reqbuild
 
-> Reads your Python files and builds a `requirements.txt` automatically — without running your code or guessing package names.
+> Reads your Python files, extracts import statements, and automatically builds a `requirements.txt` — without running your code or guessing package names.
 
 [![PyPI version](https://badge.fury.io/py/reqbuild.svg)](https://pypi.org/project/reqbuild/)
 [![Python](https://img.shields.io/pypi/pyversions/reqbuild.svg)](https://pypi.org/project/reqbuild/)
@@ -15,6 +15,20 @@
 - 🚫 **No dependencies** — only the Python standard library, nothing extra to install
 - 🔘 **Detects optional imports** — spots packages wrapped in `try/except ImportError` and marks them separately
 - 🎛️ **Flexible CLI** — control scope, exclusions, output format, and more
+
+---
+
+## Limitations
+
+This tool generates the `requirements.txt` file **only from explicit import statements** found in your Python source files.
+
+Because of this:
+
+- Dependencies that are required at runtime but are **not imported directly** will not be detected.
+- Optional, dynamic, or plugin-based dependencies may be missing.
+- Some packages required by the execution environment may need to be added manually.
+
+Always review the generated `requirements.txt` and adjust it if necessary.
 
 ---
 
